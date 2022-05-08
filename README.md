@@ -19,7 +19,7 @@ if e := encoder.Init(); e != nil {
 }
 
 // feed int16 PCM samples
-pcms := getI16Pcms(NSamplesPerChannel)
+pcms := getI16Pcms(SamplesPerChannel)
 if e := encoder.Encode(SamplesPerChannel, pcms); e != nil {
     fmt.Fprintf(os.Stderr, "encoding error: %s\n", e.Error())
 }
